@@ -346,15 +346,15 @@ export default function RandomForestDiabetesPage() {
             <div className="mt-6 grid grid-cols-3 gap-3 text-center text-sm">
               <div>
                 <p className="text-gray-500">Presisi</p>
-                <p className="font-medium">{result.performa_model.precision}</p>
+                <p className="font-medium text-gray-700">{result.performa_model.precision}</p>
               </div>
               <div>
                 <p className="text-gray-500">Recall</p>
-                <p className="font-medium">{result.performa_model.recall}</p>
+                <p className="font-medium text-gray-700">{result.performa_model.recall}</p>
               </div>
               <div>
                 <p className="text-gray-500">F1-Score</p>
-                <p className="font-medium">{result.performa_model.f1_score}</p>
+                <p className="font-medium text-gray-700">{result.performa_model.f1_score}</p>
               </div>
             </div>
 
