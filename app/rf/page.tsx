@@ -18,7 +18,7 @@ type DiabetesForm = {
   bmi: string;
   diabetespedigreefunction: string;
   age: string;
-};
+};  
 
 type PredictionResult = {
   prediksi: "Positif" | "Negatif";
@@ -103,7 +103,6 @@ export default function RandomForestDiabetesPage() {
     setError(null);
 
     try {
-      // ✅ Hapus spasi di akhir URL!
       const response = await fetch(
         "https://web-production-39361.up.railway.app/api/predict-rf",
         {
@@ -319,11 +318,11 @@ export default function RandomForestDiabetesPage() {
                             `${(percent * 100).toFixed(1)}%`
                           }
                         >
-                          <Cell fill="#10B981" /> {/* Hijau untuk Benar */}
-                          <Cell fill="#D1FAE5" /> {/* Hijau muda untuk Salah */}
+                          <Cell fill="#10B981" /> 
+                          <Cell fill="#D1FAE5" /> 
                         </Pie>
                         <Tooltip
-                          formatter={(value) => [`${value}%`, "Proporsi"]}
+                          formatter={(value, name) => [`${value}%`, name]}
                         />
                       </RechartsPieChart>
                     );
@@ -331,7 +330,6 @@ export default function RandomForestDiabetesPage() {
                 </ResponsiveContainer>
               </div>
 
-              {/* Teks Akurasi Besar */}
               <div className="text-center sm:text-left">
                 <p className="text-lg font-medium text-gray-700">
                   Akurasi Model
@@ -342,7 +340,6 @@ export default function RandomForestDiabetesPage() {
               </div>
             </div>
 
-            {/* Metrik Lain (Opsional) */}
             <div className="mt-6 grid grid-cols-3 gap-3 text-center text-sm">
               <div>
                 <p className="text-gray-500">Presisi</p>

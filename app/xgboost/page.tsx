@@ -322,7 +322,7 @@ export default function XGBoostDiabetesPage() {
                           <Cell fill="#FEF3C7" />
                         </Pie>
                         <Tooltip
-                          formatter={(value) => [`${value}%`, "Proporsi"]}
+                          formatter={(value, name) => [`${value}%`, name]}
                         />
                       </RechartsPieChart>
                     );
